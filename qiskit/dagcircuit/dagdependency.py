@@ -19,7 +19,7 @@ from collections import OrderedDict, defaultdict
 import warnings
 
 import numpy as np
-import retworkx as rx
+import reseaux as rx
 
 from qiskit.circuit.quantumregister import QuantumRegister, Qubit
 from qiskit.circuit.classicalregister import ClassicalRegister, Clbit
@@ -164,8 +164,8 @@ class DAGDependency:
                 dag_networkx.add_edge(self.get_node(source_id), self.get_node(dest_id), **edge)
         return dag_networkx
 
-    def to_retworkx(self):
-        """Returns the DAGDependency in retworkx format."""
+    def to_reseaux(self):
+        """Returns the DAGDependency in reseaux format."""
         return self._multi_graph
 
     def size(self):

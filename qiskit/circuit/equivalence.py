@@ -15,7 +15,7 @@
 import io
 from collections import namedtuple
 
-import retworkx as rx
+import reseaux as rx
 
 from qiskit.exceptions import MissingOptionalLibraryError
 from .exceptions import CircuitError

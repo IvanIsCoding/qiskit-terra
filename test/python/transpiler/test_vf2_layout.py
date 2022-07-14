@@ -14,7 +14,7 @@
 
 import unittest
 import numpy
-import retworkx
+import reseaux
 
 from qiskit import QuantumRegister, QuantumCircuit
 from qiskit.transpiler import CouplingMap, Target, TranspilerError
@@ -155,12 +155,12 @@ class TestVF2LayoutLattice(LayoutTestCase):
 
     def graph_state_from_pygraph(self, graph):
         """Creates a GraphState circuit from a PyGraph"""
-        adjacency_matrix = retworkx.adjacency_matrix(graph)
+        adjacency_matrix = reseaux.adjacency_matrix(graph)
         return GraphState(adjacency_matrix).decompose()
 
     def test_hexagonal_lattice_graph_20_in_25(self):
         """A 20x20 interaction map in 25x25 coupling map"""
-        graph_20_20 = retworkx.generators.hexagonal_lattice_graph(20, 20)
+        graph_20_20 = reseaux.generators.hexagonal_lattice_graph(20, 20)
         circuit = self.graph_state_from_pygraph(graph_20_20)
 
         dag = circuit_to_dag(circuit)
@@ -170,7 +170,7 @@ class TestVF2LayoutLattice(LayoutTestCase):
 
     def test_hexagonal_lattice_graph_9_in_25(self):
         """A 9x9 interaction map in 25x25 coupling map"""
-        graph_9_9 = retworkx.generators.hexagonal_lattice_graph(9, 9)
+        graph_9_9 = reseaux.generators.hexagonal_lattice_graph(9, 9)
         circuit = self.graph_state_from_pygraph(graph_9_9)
 
         dag = circuit_to_dag(circuit)

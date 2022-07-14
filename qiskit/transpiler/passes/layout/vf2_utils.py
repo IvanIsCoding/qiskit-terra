@@ -16,7 +16,7 @@ from collections import defaultdict
 import statistics
 import random
 
-from retworkx import PyDiGraph, PyGraph
+from reseaux import PyDiGraph, PyGraph
 
 
 def build_interaction_graph(dag, strict_direction=True):

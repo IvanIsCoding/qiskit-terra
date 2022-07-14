@@ -14,7 +14,7 @@
 
 import math
 
-import retworkx as rx
+import reseaux as rx
 
 from qiskit.transpiler.layout import Layout
 from qiskit.transpiler.basepasses import AnalysisPass

@@ -17,7 +17,7 @@ import unittest
 from test.python.algorithms import QiskitAlgorithmsTestCase
 from ddt import ddt, data
 import numpy as np
-import retworkx as rx
+import reseaux as rx
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Pauli
 from qiskit.exceptions import QiskitError
