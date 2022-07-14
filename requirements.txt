@@ -1,4 +1,4 @@
-reseaux @ git+https://github.com/IvanIsCoding/retworkx@rename-reseaux
+reseaux @ git+https://github.com/IvanIsCoding/retworkx@rename-retworkx
 numpy>=1.17
 ply>=3.10
 psutil>=5
