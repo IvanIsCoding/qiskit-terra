@@ -119,7 +119,7 @@ def level_3_pass_manager(pass_manager_config: PassManagerConfig) -> StagedPassMa
         else VF2Layout(
             coupling_map,
             seed=seed_transpiler,
-            call_limit=int(3e7),  # Set call limit to ~60 sec with reseaux 0.10.2
+            call_limit=int(3e7),  # Set call limit to ~60 sec with reseaux
             properties=backend_properties,
             target=target,
         )
