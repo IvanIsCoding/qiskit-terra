@@ -12,6 +12,7 @@
 
 """Test for the DAGDependency object"""
 
+import reseaux as rx
 import unittest
 
 from qiskit.dagcircuit import DAGDependency
@@ -22,11 +23,6 @@ from qiskit.circuit.library.standard_gates.h import HGate
 from qiskit.dagcircuit.exceptions import DAGDependencyError
 from qiskit.converters import circuit_to_dagdependency
 from qiskit.test import QiskitTestCase
-
-try:
-    import reseaux as rx
-except ImportError:
-    pass
 
 
 def raise_if_dagdependency_invalid(dag):

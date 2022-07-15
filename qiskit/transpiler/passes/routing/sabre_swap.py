@@ -451,8 +451,7 @@ def _shortest_swap_path(target_qubits, coupling_map, layout):
     virtual qubits in ``target_qubits`` together in the coupling map."""
     v_start, v_goal = target_qubits
     start, goal = layout._v2p[v_start], layout._v2p[v_goal]
-    # TODO: remove the list call once using reseaux 0.12, as the return value can be sliced.
-    path = list(reseaux.dijkstra_shortest_paths(coupling_map.graph, start, target=goal)[goal])
+    path = reseaux.dijkstra_shortest_paths(coupling_map.graph, start, target=goal)[goal]
     # Swap both qubits towards the "centre" (as opposed to applying the same swaps to one) to
     # parallelise and reduce depth.
     split = len(path) // 2

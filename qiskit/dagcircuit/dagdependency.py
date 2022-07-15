@@ -164,6 +164,16 @@ class DAGDependency:
                 dag_networkx.add_edge(self.get_node(source_id), self.get_node(dest_id), **edge)
         return dag_networkx
 
+    def to_retworkx(self):
+        """Returns the DAGDependency in retworkx format."""
+        # For backwards compatibility, use the old name
+        warnings.warn(
+            "The to_retworkx() method is deprecated, use to_reseaux() instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return self.to_reseaux()
+
     def to_reseaux(self):
         """Returns the DAGDependency in reseaux format."""
         return self._multi_graph
