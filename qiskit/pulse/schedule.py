@@ -1281,7 +1281,7 @@ class ScheduleBlock:
             return False
 
         # 4. instruction check
-        import reseaux as rx
+        import rustworkx as rx
         from qiskit.pulse.transforms import block_to_dag
 
         return rx.is_isomorphic_node_match(

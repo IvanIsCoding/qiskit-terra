@@ -129,7 +129,7 @@ def level_1_pass_manager(pass_manager_config: PassManagerConfig) -> StagedPassMa
         else VF2Layout(
             coupling_map,
             seed=seed_transpiler,
-            call_limit=int(5e4),  # Set call limit to ~100ms with reseaux
+            call_limit=int(5e4),  # Set call limit to ~100ms with rustworkx
             properties=backend_properties,
             target=target,
         )
@@ -210,7 +210,7 @@ def level_1_pass_manager(pass_manager_config: PassManagerConfig) -> StagedPassMa
         layout += common.generate_embed_passmanager(coupling_map)
         vf2_call_limit = None
         if pass_manager_config.layout_method is None and pass_manager_config.initial_layout is None:
-            vf2_call_limit = int(5e4)  # Set call limit to ~100ms with reseaux
+            vf2_call_limit = int(5e4)  # Set call limit to ~100ms with rustworkx
         routing = common.generate_routing_passmanager(
             routing_pass,
             target,

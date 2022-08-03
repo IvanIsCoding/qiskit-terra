@@ -15,7 +15,7 @@ from enum import Enum
 import logging
 import time
 
-from reseaux import PyDiGraph, vf2_mapping, PyGraph
+from rustworkx import PyDiGraph, vf2_mapping, PyGraph
 
 from qiskit.transpiler.layout import Layout
 from qiskit.transpiler.basepasses import AnalysisPass

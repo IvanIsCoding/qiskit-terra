@@ -23,7 +23,7 @@ import io
 import warnings
 
 import numpy as np
-import reseaux as rx
+import rustworkx as rx
 
 from qiskit.transpiler.exceptions import CouplingError
 from qiskit.exceptions import MissingOptionalLibraryError

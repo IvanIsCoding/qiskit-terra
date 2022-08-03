@@ -15,7 +15,7 @@
 import io
 from collections import namedtuple
 
-import reseaux as rx
+import rustworkx as rx
 
 from qiskit.exceptions import MissingOptionalLibraryError
 from .exceptions import CircuitError

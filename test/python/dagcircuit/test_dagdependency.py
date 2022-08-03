@@ -12,7 +12,7 @@
 
 """Test for the DAGDependency object"""
 
-import reseaux as rx
+import rustworkx as rx
 import unittest
 
 from qiskit.dagcircuit import DAGDependency

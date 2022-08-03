@@ -1,4 +1,4 @@
-reseaux @ git+https://github.com/IvanIsCoding/retworkx@rename-retworkx
+rustworkx @ git+https://github.com/Qiskit/rustworkx@main
 numpy>=1.17
 ply>=3.10
 psutil>=5

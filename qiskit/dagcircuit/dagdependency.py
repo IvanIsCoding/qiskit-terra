@@ -19,7 +19,7 @@ from collections import OrderedDict, defaultdict
 import warnings
 
 import numpy as np
-import reseaux as rx
+import rustworkx as rx
 
 from qiskit.circuit.quantumregister import QuantumRegister, Qubit
 from qiskit.circuit.classicalregister import ClassicalRegister, Clbit
@@ -168,14 +168,14 @@ class DAGDependency:
         """Returns the DAGDependency in retworkx format."""
         # For backwards compatibility, use the old name
         warnings.warn(
-            "The to_retworkx() method is deprecated, use to_reseaux() instead.",
+            "The to_retworkx() method is deprecated, use to_rustworkx() instead.",
             DeprecationWarning,
             stacklevel=2,
         )
-        return self.to_reseaux()
+        return self.to_rustworkx()
 
-    def to_reseaux(self):
-        """Returns the DAGDependency in reseaux format."""
+    def to_rustworkx(self):
+        """Returns the DAGDependency in rustworkx format."""
         return self._multi_graph
 
     def size(self):

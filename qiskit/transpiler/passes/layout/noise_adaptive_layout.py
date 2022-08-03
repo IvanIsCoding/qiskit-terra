@@ -14,7 +14,7 @@
 
 import math
 
-import reseaux as rx
+import rustworkx as rx
 
 from qiskit.transpiler.layout import Layout
 from qiskit.transpiler.basepasses import AnalysisPass

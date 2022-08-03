@@ -18,7 +18,7 @@ from numbers import Number
 from typing import Dict, Optional
 
 import numpy as np
-import reseaux as rx
+import rustworkx as rx
 
 from qiskit._accelerate.sparse_pauli_op import unordered_unique  # pylint: disable=import-error
 from qiskit.exceptions import QiskitError
@@ -901,7 +901,7 @@ class SparsePauliOp(LinearOp):
                 or on a per-qubit basis.
 
         Returns:
-            reseaux.PyGraph: A class of undirected graphs
+            rustworkx.PyGraph: A class of undirected graphs
         """
 
         edges = self.paulis._noncommutation_graph(qubit_wise)

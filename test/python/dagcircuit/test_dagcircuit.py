@@ -17,7 +17,7 @@ import unittest
 
 from ddt import ddt, data
 
-import reseaux as rx
+import rustworkx as rx
 from numpy import pi
 
 from qiskit.dagcircuit import DAGCircuit, DAGOpNode, DAGInNode, DAGOutNode
